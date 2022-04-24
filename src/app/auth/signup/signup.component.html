@@ -5,9 +5,24 @@
   <app-input inputType="password" label="Password" [control]="$any(authForm).get('password')"></app-input>
   <app-input inputType="password" label="Confirm Password" [control]="$any(authForm).get('passwordConfirmation')"></app-input>
 
-  <button class="ui submit button primary">
-    Submit
-  </button>
+  <div 
+    *ngIf="
+    $any(authForm).get('password').touched &&
+    $any(authForm).get('passwordConfirmation').touched &&
+    authForm.errors
+    "
+    class="ui red basic label"
+  >
+    <p *ngIf="authForm.errors?.['passwordsDontMatch']">
+      Passwords do not match
+    </p>
+  </div>
+
+  <div>
+    <button class="ui submit button primary">
+      Submit
+    </button>
+  </div>
 
   {{ authForm.errors | json }}
 </form>
