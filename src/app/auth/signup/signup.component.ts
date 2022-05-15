@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(4),
-      Validators.maxLength(20),
+      Validators.maxLength(20)
     ]),
     passwordConfirmation: new FormControl('', [
       Validators.required,
