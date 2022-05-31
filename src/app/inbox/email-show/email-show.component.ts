@@ -25,6 +25,8 @@ export class EmailShowComponent implements OnInit {
     //   })
     // })
 
+    // Need to refactor code below:
+    
     // this.route.params.pipe(
     //   switchMap(({ id }) => {
     //   this.emailService.getEmail(id);
