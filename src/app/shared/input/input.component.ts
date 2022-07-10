@@ -13,6 +13,8 @@ export class InputComponent implements OnInit {
   control!: FormControl;
   @Input()
   inputType!: string;
+  @Input()
+  controlType = 'input';
 
   constructor() { }
 
