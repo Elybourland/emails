@@ -25,4 +25,8 @@ export class EmailCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(email: Email) {
+    // Send the email off via the email service
+  }
+
 }
